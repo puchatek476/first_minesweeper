@@ -9,6 +9,10 @@
     <script src="p5.js"></script>
   </head>
   <body style="background-color: #5a797a; overflow: hidden;">
-    
+    <script>
+      $(document).ready(function () {
+        $('body').on('contextmenu', 'canvas', function(e){ return false; });
+      });
+    </script>
   </body>
 </html>
