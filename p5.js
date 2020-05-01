@@ -165,7 +165,7 @@ const setDifficultyEasy = function () {
   resizeCanvas(h, h);
   plane.width = 8;
   plane.height = 8;
-  blockSize = width / plane.width;
+  blockSize = Math.floor(width / plane.width);
   generateBombs(10);
 };
 const setDifficultyNormal = function () {
@@ -174,17 +174,17 @@ const setDifficultyNormal = function () {
   resizeCanvas(h, h);
   plane.width = 16;
   plane.height = 16;
-  blockSize = width / plane.width;
+  blockSize = Math.floor(width / plane.width);
   generateBombs(40);
 };
 const setDifficultyHard = function () {
   reset();
   plane.difficulty = 3;
-  resizeCanvas(1800, 960);
+  resizeCanvas(Math.floor(1.875 * h), Math.floor(h));
 
   plane.width = 30;
   plane.height = 16;
-  blockSize = width / plane.width;
+  blockSize = Math.floor(width / plane.width);
   generateBombs(99);
 };
 
