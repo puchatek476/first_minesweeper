@@ -1,10 +1,6 @@
 $(document).ready(function () {
   var start = new Date();
 
-  // setInterval(function () {
-  //   $("#timer").text((new Date() - start) / 1000 + " Seconds");
-  // }, 1000);
-
   $("#reset").on("click", function () {
     unlockGridCLicking();
     reset();
@@ -15,19 +11,16 @@ $(document).ready(function () {
     unlockGridCLicking();
     setDifficultyEasy();
     redraw();
-    drawWinText();
   });
   $("#normal").on("click", function () {
     unlockGridCLicking();
     setDifficultyNormal();
     redraw();
-    drawWinText();
   });
   $("#hard").on("click", function () {
     unlockGridCLicking();
     setDifficultyHard();
     redraw();
-    drawWinText();
   });
 });
 
@@ -75,6 +68,8 @@ function draw() {
   show();
   if (isWin()) {
     drawWinText();
+  } else if (plane.gameOver) {
+    drawLostText();
   }
 }
 
@@ -331,8 +326,17 @@ const drawWinText = function () {
   textAlign(CENTER);
   strokeWeight(5);
   stroke(0);
-  textSize(180);
+  textSize(150);
   text("YOU WIN!!!", width / 2, height / 2);
+};
+
+const drawLostText = function () {
+  fill(244, 0, 0);
+  textAlign(CENTER);
+  strokeWeight(5);
+  stroke(0);
+  textSize(150);
+  text("YOU LOST!!!", width / 2, height / 2);
 };
 
 const blockGridClicking = function () {
@@ -341,3 +345,5 @@ const blockGridClicking = function () {
 const unlockGridCLicking = function () {
   gridClickable = true;
 };
+
+const startTimer = function () {};
