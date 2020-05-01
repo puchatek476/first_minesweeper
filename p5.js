@@ -24,6 +24,11 @@ $(document).ready(function () {
   });
 });
 
+var w = window.innerWidth;
+var h = (window.innerHeight * 6) / 7 + 1;
+
+console.log(h);
+console.log("sie");
 var gridClickable = true;
 
 let plane = {
@@ -157,7 +162,7 @@ const showNumberOfBombsNearby = function (xpos, ypos) {
 const setDifficultyEasy = function () {
   reset();
   plane.difficulty = 1;
-  resizeCanvas(900, 900);
+  resizeCanvas(h, h);
   plane.width = 8;
   plane.height = 8;
   blockSize = width / plane.width;
@@ -166,7 +171,7 @@ const setDifficultyEasy = function () {
 const setDifficultyNormal = function () {
   reset();
   plane.difficulty = 2;
-  resizeCanvas(900, 900);
+  resizeCanvas(h, h);
   plane.width = 16;
   plane.height = 16;
   blockSize = width / plane.width;
