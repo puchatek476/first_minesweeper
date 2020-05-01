@@ -162,7 +162,7 @@ const showNumberOfBombsNearby = function (xpos, ypos) {
 const setDifficultyEasy = function () {
   reset();
   plane.difficulty = 1;
-  resizeCanvas(1000, 1000);
+  resizeCanvas(900, 900);
   plane.width = 8;
   plane.height = 8;
   blockSize = width / plane.width;
@@ -171,7 +171,7 @@ const setDifficultyEasy = function () {
 const setDifficultyNormal = function () {
   reset();
   plane.difficulty = 2;
-  resizeCanvas(1000, 1000);
+  resizeCanvas(900, 900);
   plane.width = 16;
   plane.height = 16;
   blockSize = width / plane.width;
