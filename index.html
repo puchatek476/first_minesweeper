@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <script src="p5.js"></script>
+    <script src="jquerry.js"></script>
   </head>
   <body style="background-color: #5a797a; overflow: hidden;">
     <script>
@@ -14,5 +15,15 @@
         $('body').on('contextmenu', 'canvas', function(e){ return false; });
       });
     </script>
+    <div id = "menu">
+      <div id = "timer">T</div>
+        
+      
+      <input class = "menuBut"id = "reset" type = "button" value = "reset">
+      <input class = "menuBut"id = "easy" type = "button" value = "easy">
+      <input class = "menuBut"id = "normal" type = "button" value = "normal">
+      <input class = "menuBut"id = "hard" type = "button" value = "hard">
+
+    </div>
   </body>
 </html>
