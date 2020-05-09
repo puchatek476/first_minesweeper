@@ -5,6 +5,7 @@ $(document).ready(function () {
     unlockGridCLicking();
     reset();
     updateDifficulty();
+    
     redraw();
   });
   $("#easy").on("click", function () {
